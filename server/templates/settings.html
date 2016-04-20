@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_fixes.css" />
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="js/conn.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+</head>
+<body>
+<div id="app" class="applocal">
+    <div id="infotasks">
+        <div class="tasks">
+            <p>{{_("Settings")|upper}}</p>
+        </div>
+    </div><!--end of #infotasks-->
+    <div class="settings">
+        <div class="settings-options">
+            <form method="post" action="#">
+            <fieldset>
+            <legend>{{_("Settings")}}</legend>
+            <p class="section-title" id="anchor_general">{{_("General")}}</p>
+            <input type="hidden" name="utf8-fix" id="utf8-fix" value="✓">
+            <ul>
+                <li>
+                    <label for="language" class="short label-textright">{{_("Language:")}}</label>
+                    <select name="language">
+                        {% for lang,info in LANGUAGES %}
+                        <option value="{{lang}}">{{info[0]}}</option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                    <button name="set-default" class="long-auto"><span class="if_not_disabled">{{_("Set as default torrent client")}}</span><span class="if_disabled">{{_("%(app_name)s is your default torrent client") % {"app_name": APP_NAME} }}</span></button>
+                </li>
+                <li>
+                    <input type="checkbox" name="prevent-sleeping" id="prevent-sleeping" class="checkbox">
+                    <label for="prevent-sleeping" class="verylarge">{{_("Prevent the computer from sleeping/suspending")}}</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="run-startup" id="run-startup" class="checkbox">
+                    <label for="run-startup" class="verylarge">{{_("Run application on startup")}}</label>
+                </li>
+                {#
+                <li>
+                    <p class="section-subtitle2">{{_("Updates")}}</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="updates" id="updates-never" class="radio">
+                            <label for="updates-never"  class="verylarge">{{_("Never")}}</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="updates" id="updates-check" class="radio">
+                            <label for="updates-check" class="verylarge">{{_("Check for updates automatically")}}</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="updates" id="updates-install" class="radio">
+                            <label for="updates-install" class="verylarge">{{_("Install updates automatically")}}</label>
+                        </li>
+                    </ul>
+                </li>
+                #}
+            </ul>
+            <p class="section-title" id="anchor_connection">{{_("Connection")}}</p>
+            <p class="section-subtitle">{{_("Standard mode")}}</p>
+            <ul>
+                <li>
+                    <label for="standard-upload-speed-limit" class="large label-textright">{{_("Upload speed limit")}}</label>
+                    <input type="text" name="standard-upload-speed-limit" id="standard-upload-speed-limit" class="shortest netspeed-validator numeric-input" data-numeric-input="0,,10" size="6" maxlength="6" placeholder="auto">
+                    <p>KB/s</p>
+                </li>
+                <li>
+                    <label for="standard-download-speed-limit" class="large label-textright">{{_("Download speed limit")}}</label>
+                    <input type="text" name="standard-download-speed-limit" id="standard-download-speed-limit" class="shortest netspeed-validator numeric-input" data-numeric-input="0,,10" size="6" maxlength="6" placeholder="auto">
+                    <p>KB/s</p>
+                </li>
+                <li>
+                    <label for="standard-maximum-simultaneous-downloads" class="large label-textright">{{_("Maximum active downloads")}}</label>
+                    <input type="text" name="standard-maximum-simultaneous-downloads" id="standard-maximum-simultaneous-downloads" class="shortest numeric-input" data-numeric-input="1,," size="3" maxlength="3">
+                </li>
+                {#
+                <li>
+                    <label for="standard-connections-per-download" class="large label-textright">{{_("Connections per download:")}}</label>
+                    <input type="text" name="standard-connections-per-download" id="standard-connections-per-download" class="shortest" maxlength="3">
+                </li>
+                #}
+            </ul>
+            <p class="section-subtitle">{{_("Slow mode")}}</p>
+            <ul>
+                <li>
+                    <label for="snail-upload-speed-limit" class="large label-textright">{{_("Upload speed limit")}}</label>
+                    <input type="text" name="snail-upload-speed-limit" id="snail-upload-speed-limit" class="shortest netspeed-validator numeric-input" data-numeric-input="0,,10" size="6" maxlength="6" placeholder="auto">
+                    <p>KB/s</p>
+                </li>
+                <li>
+                    <label for="snail-download-speed-limit" class="large label-textright">{{_("Download speed limit")}}</label>
+                    <input type="text" name="snail-download-speed-limit" id="snail-download-speed-limit" class="shortest netspeed-validator numeric-input" data-numeric-input="0,,10" size="6" maxlength="6" placeholder="auto">
+                    <p>KB/s</p>
+                </li>
+                <li>
+                    <label for="snail-maximum-simultaneous-downloads" class="large label-textright">{{_("Maximum active downloads")}}</label>
+                    <input type="text" name="snail-maximum-simultaneous-downloads" id="snail-maximum-simultaneous-downloads" class="shortest numeric-input" data-numeric-input="1,," size="3" maxlength="3">
+                </li>
+                {#
+                <li>
+                    <label for="snail-connections-per-download" class="large label-textright">{{_("Connections per download:")}}</label>
+                    <input type="text" name="snail-connections-per-download" id="snail-connections-per-download" class="shortest" maxlength="3">
+                </li>
+                #}
+            </ul>
+            <p class="section-subtitle">{{_("Ports")}}</p>
+            <ul>
+                <li>
+                    <label for="auto-ports" class="large label-textright">{{_("Choose ports automatically")}}</label>
+                    <input type="checkbox" name="auto-ports" id="auto-ports" class="checkbox">
+                </li>
+                <li>
+                    {% if backends %}
+                    <ul>
+                    {% for backend in backends %}
+                        {% for desc, value in backend.ports %}
+                            <li>
+                                <label for="port-{{backend.name}}-{{ loop.index0 }}" class="large label-textright">
+                                    {%- if num_backends > 1 -%}
+                                    {{backend.name}} ({{ desc }})
+                                    {%- else -%}
+                                    {{ desc }}
+                                    {%- endif -%}
+                                </label>
+                                <input type="text" name="port-{{backend.name}}-{{ loop.index0 }}" id="port-{{backend.name}}-{{ loop.index0 }}" value="{{value}}" class="shortest numeric-input" data-numeric-input="1024,65535,">
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+            </ul>
+            {#
+            <p class="section-subtitle">{{_("Proxy Settings")}}</p>
+            <ul>
+                <li>
+                    <ul>
+                        <li>
+                            <label for="proxy-host" class="short label-textright">{{_("Host:")}}</label>
+                            <input type="text" name="proxy-host" id="proxy-host" class="medium">
+                        </li>
+                        <li>
+                            <label for="proxy-port" class="short label-textright">{{_("Port:")}}</label>
+                            <input type="text" name="proxy-port" id="proxy-port" class="medium">
+                        </li>
+                        <li>
+                            <label for="proxy-user" class="short label-textright">{{_("User:")}}</label>
+                            <input type="text" name="proxy-user" id="proxy-user" class="medium">
+                        </li>
+                        <li>
+                            <label for="proxy-pass" class="short label-textright">{{_("Pass:")}}</label>
+                            <input type="text" name="proxy-pass" id="proxy-pass" class="medium">
+                        </li>
+                        <li>
+                            <label for="proxy-socks" class="short label-textright">{{_("SOCKS:")}}</label>
+                            <input type="text" name="proxy-socks" id="proxy-socks" class="medium">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            #}
+
+            <p class="section-title" id="anchor_downloads">{{_("Downloads")}}</p>
+            <ul>
+                <li>
+                    <label for="downloads-folder" class="medium label-textright">{{_("Downloads folder:")}}</label>
+                    <input type="text" name="downloads-folder" id="downloads-folder" class="large">
+                    <button class="long-auto" name="downloads-folder-button">{{_("Change")}}</button>
+                </li>
+
+                <li>
+                    <label for="notify-downloads" class="medium label-textright">{{_("Notify finished downloads")}}</label>
+                    <input type="checkbox" name="notify-downloads" id="notify-downloads" class="checkbox">
+                    {#
+                    <label for="notify-downloads-sound" class="short label-textright">{{_("With sound")}}</label>
+                    <input type="checkbox" name="notify-downloads-sound" id="notify-downloads-sound" class="checkbox disabled">
+                    #}
+                </li>
+
+            </ul>
+        {#
+
+
+            <p class="section-title" id="anchor_sharing">{{_("Sharing")}}</p>
+            <p class="section-subtitle">{{_("Seed files after downloading:")}}</p>
+            <ul>
+                <li>
+                    <input type="radio" name="sharing" id="sharing-disabled" class="radio" selected="selected">
+                    <label for="sharing-disabled" class="short">{{_("Disabled")}}</label>
+                </li>
+                <li>
+                    <input type="radio" name="sharing" id="sharing-minutes" class="radio">
+                    <p class="veryshort">{{_("For")}}</p>
+                    <input type="text" name="snail-connections-per-download" class="shortest" maxlength="3">
+                    <label for="sharing-minutes" class="short">{{_("minutes")}}</label>
+                </li>
+                <li>
+                    <input type="radio" name="sharing" id="sharing-ratio" class="radio">
+                    <p class="veryshort">{{_("Until")}}</p>
+                    <input type="text" name="snail-connections-per-download" class="shortest" maxlength="3">
+                    <label for="sharing-ratio" class="short">{{_("ratio")}}</label>
+                </li>
+            </ul>
+
+
+
+            <p class="section-title" id="anchor_display">{{_("Display")}}</p>
+            <ul>
+                <li>
+                    <label for="font-size" class="short label-textright">{{_("Font Size:")}}</label>
+                    <select id="font-size">
+                        <option value="small">{{_("Small")}}</option>
+                        <option value="medium" selected>{{_("Medium")}}</option>
+                        <option value="big">{{_("Big")}}</option>
+                    </select>
+                </li>
+            </ul>
+
+
+
+            <p class="section-title" id="anchor_social">{{_("Social Media")}}</p>
+            <p class="section-subtitle">{{_("Facebook")}}</p>
+            <ul>
+                <li>
+                    <label for="facebook-user" class="veryshort label-textright">{{_("Email:")}}</label>
+                    <input type="text" name="facebook-user" id="facebook-user" class="medium">
+                    <label for="facebook-pass" class="veryshort label-textright">{{_("Pass:")}}</label>
+                    <input type="password" name="facebook-pass" id="facebook-pass" class="short">
+                </li>
+            </ul>
+            <p class="section-subtitle">{{_("Twitter")}}</p>
+            <ul>
+                <li>
+                    <label for="twitter-user" class="veryshort label-textright">{{_("Email:")}}</label>
+                    <input type="text" name="twitter-user" id="twitter-user" class="medium">
+                    <label for="twitter-pass" class="veryshort label-textright">{{_("Pass:")}}</label>
+                    <input type="password" name="twitter-pass" id="twitter-pass" class="short">
+                </li>
+            </ul>
+        #}
+        </fieldset>
+        <span class="clearer"></span>
+        </form>
+        </div><!--end of .settings-options-->
+        <div class="settings-left">
+            <ul class="settings-category" id="settings_categories">
+
+                <li class="settings-category-general settings-selected">
+                    <a href="#anchor_general">
+                        <span>
+                            {{_("General")}}
+                        </span>
+                    </a>
+                </li>
+                <li class="settings-category-connection">
+                    <a href="#anchor_connection">
+                        <span>
+                            {{_("Connection")}}
+                        </span>
+                    </a>
+                </li>
+                <li class="settings-category-downloads">
+                    <a href="#anchor_downloads">
+                        <span>
+                            {{_("Downloads")}}
+                        </span>
+                    </a>
+                </li>
+                {#
+                <li class="settings-category-sharing">
+                    <a href="#anchor_sharing">
+                        <span>
+                            {{_("Sharing")}}
+                        </span>
+                    </a>
+                </li>
+                <li class="settings-category-display">
+                    <a href="#anchor_display">
+                        <span>
+                            {{_("Display")}}
+                        </span>
+                    </a>
+                </li>
+                <li class="settings-category-player">
+                    <a href="#anchor_player">
+                        <span>
+                            {{_("Player")}}
+                        </span>
+                    </a>
+                </li>
+                <li class="settings-category-socialmedia">
+                    <a href="#anchor_social">
+                        <span>
+                            {{_("Social Media")}}
+                        </span>
+                    </a>
+                </li>
+            #}
+            </ul>
+        </div><!--end of .settings-left-->
+    </div> <!--end of .settings-->
+</div><!--end of #app-->
+</body>
+</html>

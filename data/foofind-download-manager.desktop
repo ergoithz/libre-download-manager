@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=0.3-20140421-W32
+_Name=Foofind Download Manager
+_GenericName=BitTorrent Client
+_X-GNOME-FullName=Foofind Download Manager BitTorrent Client
+_Comment=Search, download and play any files over BitTorrent
+TryExec=foofind-download-manager
+Exec=foofind-download-manager
+Icon=icons/app_96.png
+Terminal=false
+Type=Application
+Categories=Network;FileTransfer;P2P;
+StartupNotify=true
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_fixes.css" />
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script language="text/javascript">window.setTimeout(function(){$('go_home').submit();}, 30000);</script>
+</head>
+<body>
+<div id="app">
+    <form id="go_home" method="{{home_method}}" action="{{home_url}}"></form>
+    <div class="error">
+        <div class="error-img">
+            <img src="imgs/ico.error-connection-280.png" alt="{{_('Error')}}">
+        </div><!--end of .error-img-->
+        <div class="error-text">
+            <p class="error-title">{{_("Cannot connect!")}}</p>
+            <p>{{_("It seems your Internet connection is down. You need to be connected to perform the search. Please %(click)s when your connection is back.") % {"click": '<a href="javascript:$('go_home').submit()">'+_("click here")+'</a>'}}}</p>
+        </div><!--end of .error-text-->
+    </div><!--end of .error-->
+</div><!--end of #app-->
+</body>
+</html>

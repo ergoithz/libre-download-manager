@@ -1,0 +1,260 @@
+{%- macro undo(num) -%}
+<span>{{_("You've just deleted <strong>%(num)d</strong> file(s) from your library.") % {"num": num}}} <a href="#">{{_("Undo")}}</a></span>
+{%- endmacro -%}
+
+{%- macro toolbar_tasks(num, total) -%}
+    {%- if num==-1 %}
+        {{_("%(total)d file(s) on your %(app_name)s library") % {"total": total, "app_name": APP_SHORT_NAME}}}
+    {%- else %}
+        {{_("%(num)d of %(total)d file(s) on your %(app_name)s library") % {"num": num, "total": total, "app_name": APP_SHORT_NAME}}}
+    {%- endif %}
+{%- endmacro -%}
+
+{%- macro breadcrumb(item) -%}
+<li>
+    <a href="#">{{ item.name|e }}</a>
+</li>
+{%- endmacro -%}
+
+{%- macro card(item) -%}
+<li class="file {% if item.progress == 1 %}finished{% else %}unfinished{% endif %}{{ ' folder-card' if item.type in ('folder', 'download') }}">
+    {%- if item.new %}
+    <span class="new">{{_("New")}}</span>
+    {%- endif %}
+     <a href="#a" class="a-image background-{% if item.type in ('folder', 'download') %}folder{% else %}file{% endif %}" title="{{- item.name|e -}}">
+        <div class="image">
+            {%- if item.preview_path %}
+            <div class="filetype">
+                <span class="filetype-{{ item.filetype }}"></span>
+            </div>
+            {% endif %}
+            {% if item.type in ("folder", "download") %}
+                <span class="folder-bg"><span class="folder-button"></span></span>
+            {% else %}
+                <span class="play-bg"><span class="play-button"></span></span>
+            {% endif %}
+            {%- if item.preview_path %}
+                <img src="{{ item.preview_path }}">
+            {%- elif item.filetype %}
+                <img src="imgs/{{ WEB_CATEGORY_PLACEHOLDERS[item.filetype] }}.png">
+            {%- else %}
+                <img src="imgs/{{ WEB_CATEGORY_PLACEHOLDERS['unknown'] }}.png">
+            {%- endif %}
+            <div class="downloading">
+                <div class="downloaded" style="width:{{item.progress*100}}%"></div>
+            </div>
+        </div>
+    </a>
+    <a href="#b" class="a-text" title="{{- item.name|e -}}">
+        <div class="text">
+            <p>{{- item.name|e -}}<span class="ellipsizor">{{- item.ext if item.ext -}}&nbsp;&nbsp;</span></p>
+        </div>
+    </a>
+    <div class="info-card">
+        <a href="#" class="reverse-close"></a>
+        <p class="title">{{- item.name|e -}}</p>
+        <ul class="reverse-actions">
+            {% if item.type == "file" %}
+            <li class="reverse-action-play">
+                <a href="#" class="button button-on">
+                <span>
+                    <img src="imgs/ico.button-18-play-off.png">
+                    <img src="imgs/ico.button-18-play-on.png">
+                    {% if item.category in ("audio", "video") %}
+                    <p>{{_("Play")}}</p>
+                    {% else %}
+                    <p>{{_("Open")}}</p>
+                    {% endif %}
+                </span>
+                </a>
+            </li>
+            {% endif %}
+            <li class="reverse-action-folder">
+                <a href="#" class="button button-off">
+                <span>
+                    <img src="imgs/ico.button-18-folder-off.png">
+                    <img src="imgs/ico.button-18-folder-on.png">
+                     <p>{{_("Browse")}}</p>
+                </span>
+                </a>
+            </li>
+            {% if item.type == "download" %}
+            <li class="reverse-action-delete">
+                <a href="#" class="button button-off">
+                <span>
+                    <img src="imgs/ico.button-18-trash-off.png">
+                    <img src="imgs/ico.button-18-trash-on.png">
+                     <p>{{_("Remove")}}</p>
+                </span>
+                </a>
+            </li>
+            {% endif %}
+            {#-
+            <li class="reverse-3actions">
+                <ul>
+                    <li class="reverse-action-delete">
+                        <a href="#" class="button button-off">
+                        <span>
+                            <img src="imgs/ico.button-18-trash-off.png">
+                            <img src="imgs/ico.button-18-trash-on.png">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="reverse-action-play">
+                        <a href="#" class="button button-on">
+                        <span>
+                            <img src="imgs/ico.button-18-play-off.png">
+                            <img src="imgs/ico.button-18-play-on.png">
+                        </span>
+                        </a>
+                    </li>
+                    <li class="reverse-action-share">
+                        <a href="#" class="button button-off">
+                        <span>
+                            <img src="imgs/ico.button-18-share-off.png">
+                            <img src="imgs/ico.button-18-share-on.png">
+                        </span>
+                        </a>
+                        <div class="bubble action-report-bubble">
+                            <span class="bubble-pin"></span>
+                            <a href="#" class="bubble-close"></a>
+                            <p class="title">{{_("Share:")}}</p>
+                            <form method="post" action="#">
+                                <fieldset>
+                                    <legend>{{_("Share:")}}</legend>
+                                    <textarea rows="5" cols="25"></textarea>
+                                    <p class="subtitle">
+                                        {{- {{_("Share to:")}} -}}
+                                        <a href="#" class="cog">
+                                            <img src="imgs/ico.button-10-cog-on.png">
+                                        </a>
+                                    </p>
+                                    <ul class="share">
+                                        <li>
+                                            <a href="#" class="button button-off">
+                                            <span>
+                                                <img src="imgs/ico.button-18-facebook-off.png">
+                                                <img src="imgs/ico.button-18-facebook-on.png">
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="button button-off">
+                                            <span>
+                                                <img src="imgs/ico.button-18-twitter-off.png">
+                                                <img src="imgs/ico.button-18-twitter-on.png">
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <button type="submit" class="button button-on">
+                                                <img src="imgs/ico.button-18-share-on.png">
+                                                <p>{{_("Share")}}</p>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            #}
+            <li class="reverse-action-rename">
+                <a href="#" class="button button-off">
+                <span>
+                    <img src="imgs/ico.button-18-rename-off.png">
+                    <img src="imgs/ico.button-18-rename-on.png">
+                    <p>{{_("Rename")}}</p>
+                </span>
+                </a>
+            </li>
+            {#-
+            <li class="reverse-action-p2p">
+                <a href="#" class="button button-off">
+                <span>
+                    <img src="imgs/ico.button-18-p2p-off.png">
+                    <img src="imgs/ico.button-18-p2p-on.png">
+                    <p>{{_("seed")}}</p>
+
+                    <span>
+                        <img src="imgs/ico.toggle-24-on.png" class="toggle">
+                        <img src="imgs/ico.toggle-24-off.png" class="toggle">
+                    </span>
+                </span>
+                </a>
+            </li>
+            #}
+        </ul>
+    </div><!--end of .info-card-->
+</li>
+{%- endmacro -%}
+
+{%- macro category(item) -%}
+<li class="play-category-{{item.css}}{% if item.selected %} play-selected{% endif %}">
+    <a href="#">
+        <span>
+            {{ item.name|e|capitalize }}
+        </span>
+    </a>
+</li>
+{%- endmacro -%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_fixes.css" />
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="js/conn.js"></script>
+    <script type="text/javascript" src="js/play.js"></script>
+</head>
+<body>
+<div id="app" class="applocal">
+    <div id="infotasks">
+        <div class="undo">
+            <p id="js_undo">{# filled by js #}</p>
+        </div>
+        <div class="tasks">
+            <p id="js_tasks">{% if num_files is defined %}{{ toolbar_tasks(num_files, total_files) }}{% endif %}</p>
+        </div>
+        <div class="search-play">
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>{{_("Search form")}}</legend>
+                    <div class="search-text">
+                        <label for="search-text">{{_("Search:")}}</label>
+                        <input type="text" name="search-text" class="search-text" placeholder={{_("'Type here your search'")}}>
+                    </div>
+                    <div class="search-button-find">
+                        <button type="submit" class="search-button-find"><img src="imgs/ico.button-18-magni-off.png" alt="Find"></button>
+                    </div>
+                </fieldset>
+            </form>
+        </div><!--end of .search-main-->
+    </div><!--end of #infotasks-->
+
+    <div class="play">
+        <div class="play-left">
+            <ul class="play-category"  id="js_categories">
+                {% for item in categories %}{{ category(item) }}{%- endfor %}
+            </ul>
+        </div>
+        <div class="play-right">
+            <div class="play-breadcrumbs">
+                <ul id="js_breadcrumbs">
+                    {%- for item in breadcrumbs %}{{ breadcrumb(item) }}{%- endfor %}
+                </ul>
+            </div><!--end of .breadcrumbs-->
+            <div class="play-items">
+                <ul id="js_cards">
+                    {%- for item in playitems %}{{ card(item) }}{%- endfor %}
+                </ul>
+            </div><!--end of .play-items-->
+        </div>
+    </div> <!--end of .play-->
+</div><!--end of #app-->
+</body>
+</html>

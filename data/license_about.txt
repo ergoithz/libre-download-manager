@@ -1,0 +1,56 @@
+Foofind Download Manager
+Copyright (c) 2012-2014 Foofind Labs, S.L.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+This software includes parts from other libraries and resources with
+their own licenses:
+
+faenza icon theme
+  Copyright (C) 2010 Matthieu James
+  License: http://www.gnu.org/licenses/gpl-3.0.html
+
+py2exe
+  Copyright (C) 2000-2005 Thomas Heller, Mark Hammond, Jimmy Retzlaff
+  License: http://www.py2exe.org/LICENSE.txt
+
+python 2.7.5
+  Copyright (C) 2001-2013 Python Software Foundation; All Rights Reserved
+  License: http://www.python.org/download/releases/2.7/license/
+
+libtorrent
+  Copyright (C) 2003-2013 Arvid Norberg
+  License: http://libtorrent.googlecode.com/git/LICENSE
+
+gevent
+  Copyright (C) 2009-2013 Denis Bilenko and the contributors
+  License: https://github.com/surfly/gevent/blob/master/LICENSE
+
+cairo - pycairo
+  Copyright (C) 2002-2013 Keith Packard, Carl Worth, Behdad Esfahbod
+  License: http://www.gnu.org/licenses/lgpl-2.1.html
+
+wxWidgets - wxPython
+  Copyright (C) 1998-2013 Julian Smart, Robert Roebling et al
+  License: http://opensource.org/licenses/WXwindows
+
+wxMediaPlayerCtrl
+  Copyright (C) 2010 David Herberth
+  License: http://opensource.org/licenses/MIT
+
+MPlayer
+  Copyright (C) 2000-2013 MPlayer team
+  License: http://www.gnu.org/licenses/gpl-2.0.html

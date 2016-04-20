@@ -1,0 +1,91 @@
+.file .image .downloading .downloaded{
+    width:0px;
+    }
+
+/* .finished/.unfinished dependent elements */
+.file.unfinished .folder-button, .file.unfinished .play-bg{
+    display:none!important;
+    }
+
+.file.unfinished .reverse-action-play{
+    display:none!important;
+    }
+
+.file.finished .downloading{
+    display:none;
+    }
+
+.file.unfinished .a-image{
+    cursor:default;
+    }
+
+.file.finished .a-image, .file.folder-card .a-image{
+    cursor:pointer;
+    }
+
+/* .reverse dependent elements */
+.info-card{
+    display:none;
+    }
+.file.reverse .info-card{
+    display:block;
+    }
+.file.reverse .a-image, .file.reverse .a-text{
+    display:none;
+    }
+
+/* .visible elements */
+.search-play, .undo, .bubble{
+    display:none!important;
+    }
+.undo.visible, .undo.visible .bubble.visible{
+    display:block!important;
+    }
+
+
+/* other fixes */
+*:disabled{
+    -webkit-opacity:0.5;
+    -moz-opacity:0.5;
+    -o-opacity:0.5;
+    opacity:0.5;
+    cursor:default!important;
+    }
+.if_disabled{
+    display:none;
+    }
+*:disabled span.if_disabled{
+    display:inline!important;
+    }
+*:disabled div.if_disabled{
+    display:block!important;
+    }
+*:disabled .if_not_disabled{
+    display:none!important;
+    }
+.file .a-text p {
+    height: 3em;
+    }
+.ellipsizor{
+    display:inline-block;
+    min-height:1em;
+    min-width:1.5em;
+}
+input.shortest{
+    width:auto!important;
+}
+input[type=text][size]{
+    padding-right:0.25em;
+}
+input[value=auto]{
+    /* IE7 placeholder */
+    color:gray;
+}
+input[type=checkbox]{
+    cursor:pointer;
+}
+span.clearer{
+    clear:both;
+    display:block;
+    height:0;
+}

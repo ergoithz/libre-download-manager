@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.3.0.1">
+    <object class="wxFrame" name="MainFrame">
+        <style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+        <size>700,500</size>
+        <bg>#ffffff</bg>
+        <title></title>
+        <centered>1</centered>
+        <object class="wxStatusBar" name="StatusBar">
+            <style>wxST_SIZEGRIP</style>
+            <fields>3</fields>
+        </object>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="TabPanel">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <font>
+                        <family>default</family>
+                        <style>normal</style>
+                        <weight>normal</weight>
+                        <underlined>0</underlined>
+                    </font>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND|wxLEFT|wxRIGHT</flag>
+                <border>19</border>
+                <object class="wxPanel" name="MainToolbar">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,60</size>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="ToolbarCounter">
+                                <font>
+                                    <size>11</size>
+                                    <family>default</family>
+                                    <style>normal</style>
+                                    <weight>normal</weight>
+                                    <underlined>0</underlined>
+                                </font>
+                                <label>5 tasks</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="spacer">
+                            <option>1</option>
+                            <flag>wxEXPAND</flag>
+                            <border>5</border>
+                            <size>0,0</size>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                            <border>10</border>
+                            <object class="wxPanel" name="ToolbarSearchbox">
+                                <size>300,39</size>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <option>1</option>
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                                        <border>14</border>
+                                        <object class="wxTextCtrl" name="SearchboxEntry">
+                                            <style>wxTE_PROCESS_ENTER|wxNO_BORDER|wxWANTS_CHARS</style>
+                                            <size>240,-1</size>
+                                            <font>
+                                                <size>11</size>
+                                                <family>default</family>
+                                                <style>normal</style>
+                                                <weight>normal</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <value></value>
+                                            <maxlength>0</maxlength>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>7</border>
+                                        <object class="wxPanel" name="m_panel17">
+                                            <style>wxTAB_TRAVERSAL</style>
+                                            <size>1,27</size>
+                                            <bg>#999999</bg>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+                                        <border>14</border>
+                                        <object class="wxBitmapButton" name="SearchboxButton">
+                                            <style>wxNO_BORDER</style>
+                                            <bg>#ffffff</bg>
+                                            <bitmap>gui/ico.button-18-magni-off.png</bitmap>
+                                            <default>0</default>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="BrowserFind">
+                    <style>wxTAB_TRAVERSAL</style>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="BrowserLibrary">
+                    <style>wxTAB_TRAVERSAL</style>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="BrowserExtra">
+                    <style>wxTAB_TRAVERSAL</style>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="BrowserSettings">
+                    <style>wxTAB_TRAVERSAL</style>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="ToolbarSep">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                    <bg>#d1d1d1</bg>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxALL|wxEXPAND</flag>
+                <border>0</border>
+                <object class="wxScrolledWindow" name="ScrolledWindow">
+                    <style>wxCLIP_CHILDREN|wxFULL_REPAINT_ON_RESIZE|wxVSCROLL|wxWANTS_CHARS</style>
+                    <bg>#eaeaea</bg>
+                    <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="ToolbarSep2">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxDialog" name="PropertiesDialog">
+        <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+        <size>500,400</size>
+        <title>Properties</title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxScrolledWindow" name="PropertiesScrolledWindow">
+                    <style>wxHSCROLL|wxVSCROLL</style>
+                    <bg>#ffffff</bg>
+                    <fg>#000000</fg>
+                    <object class="wxFlexGridSizer">
+                        <rows>500</rows>
+                        <cols>2</cols>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>1</growablecols>
+                        <growablerows></growablerows>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="PropertiesSeparator">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                    <bg>#a0a0a0</bg>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxALIGN_RIGHT|wxALL</flag>
+                <border>15</border>
+                <object class="wxButton" name="PropertiesClose">
+                    <label>Close</label>
+                    <default>0</default>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="DownloadPanel">
+        <style>wxCLIP_CHILDREN</style>
+        <size>678,60</size>
+        <font>
+            <family>default</family>
+            <style>normal</style>
+            <weight>normal</weight>
+            <underlined>0</underlined>
+        </font>
+        <hidden>1</hidden>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="m_panel19">
+                    <size>-1,1</size>
+                    <bg>#ffffff</bg>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER|wxRIGHT|wxLEFT</flag>
+                        <border>20</border>
+                        <object class="wxStaticBitmap" name="icon">
+                            <pos>-1,-1</pos>
+                            <size>30,30</size>
+                            <bitmap />
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>1</option>
+                        <flag>wxEXPAND</flag>
+                        <border>10</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxEXPAND|wxLEFT</flag>
+                                <border>2</border>
+                                <object class="wxBoxSizer">
+                                    <minsize>-1,31</minsize>
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <option>1</option>
+                                        <flag>wxALIGN_BOTTOM|wxBOTTOM</flag>
+                                        <border>4</border>
+                                        <object class="wxStaticText" name="label_name">
+                                            <size>-1,20</size>
+                                            <style>wxST_NO_AUTORESIZE</style>
+                                            <font>
+                                                <size>11</size>
+                                                <family>default</family>
+                                                <style>italic</style>
+                                                <weight>bold</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <label>no name</label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxEXPAND</flag>
+                                <border>5</border>
+                                <object class="wxGauge" name="progress_bar">
+                                    <style>wxGA_HORIZONTAL</style>
+                                    <size>-1,5</size>
+                                    <range>1000</range>
+                                    <value>50</value>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxEXPAND</flag>
+                                <border>3</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                                        <border>3</border>
+                                        <object class="wxStaticBitmap" name="DownloadRateIcon">
+                                            <size>10,20</size>
+                                            <bitmap>gui/ico.download-arrow-down.png</bitmap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_BOTTOM|wxRIGHT</flag>
+                                        <border>0</border>
+                                        <object class="wxStaticText" name="DownloadRateLabel">
+                                            <size>59,20</size>
+                                            <font>
+                                                <size>9</size>
+                                                <family>default</family>
+                                                <style>normal</style>
+                                                <weight>normal</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <label>0     B/s</label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                                        <border>3</border>
+                                        <object class="wxStaticBitmap" name="UploadRateIcon">
+                                            <size>10,20</size>
+                                            <bitmap>gui/ico.download-arrow-up.png</bitmap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_BOTTOM|wxRIGHT</flag>
+                                        <border>0</border>
+                                        <object class="wxStaticText" name="UploadRateLabel">
+                                            <size>59,20</size>
+                                            <font>
+                                                <size>9</size>
+                                                <family>default</family>
+                                                <style>normal</style>
+                                                <weight>normal</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <label>0     B/s</label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>1</option>
+                                        <flag>wxALIGN_BOTTOM|wxLEFT</flag>
+                                        <border>0</border>
+                                        <object class="wxStaticText" name="EmptySpace">
+                                            <style>wxALIGN_RIGHT</style>
+                                            <size>-1,20</size>
+                                            <label></label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_BOTTOM|wxLEFT</flag>
+                                        <border>0</border>
+                                        <object class="wxStaticText" name="DownloadLabelProgress">
+                                            <style>wxALIGN_RIGHT</style>
+                                            <size>-1,20</size>
+                                            <font>
+                                                <size>9</size>
+                                                <family>default</family>
+                                                <style>normal</style>
+                                                <weight>normal</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <label>999.9 of 999.9 MB  MM</label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_BOTTOM|wxRIGHT</flag>
+                                        <border>0</border>
+                                        <object class="wxStaticText" name="DownloadLabelProgress2">
+                                            <style>wxALIGN_RIGHT</style>
+                                            <size>-1,20</size>
+                                            <font>
+                                                <size>9</size>
+                                                <family>default</family>
+                                                <style>normal</style>
+                                                <weight>bold</weight>
+                                                <underlined>0</underlined>
+                                            </font>
+                                            <label> ·  0%</label>
+                                            <wrap>-1</wrap>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxLEFT|wxALIGN_CENTER_VERTICAL</flag>
+                        <border>16</border>
+                        <object class="wxPanel" name="DownloadPanelSep1">
+                            <size>2,50</size>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                        <border>9</border>
+                        <object class="wxFlexGridSizer">
+                            <rows>2</rows>
+                            <cols>2</cols>
+                            <minsize>184,-1</minsize>
+                            <vgap>2</vgap>
+                            <hgap>7</hgap>
+                            <growablecols>1</growablecols>
+                            <growablerows></growablerows>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBitmap" name="QualityIcon">
+                                    <bitmap>gui/ico.signal-0.png</bitmap>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+                                <border>0</border>
+                                <object class="wxStaticText" name="label_status">
+                                    <font>
+                                        <size>8</size>
+                                        <family>default</family>
+                                        <style>normal</style>
+                                        <weight>normal</weight>
+                                        <underlined>0</underlined>
+                                    </font>
+                                    <label>No status</label>
+                                    <wrap>-1</wrap>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBitmap" name="m_bitmap8">
+                                    <bitmap>gui/ico.time.png</bitmap>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+                                <border>0</border>
+                                <object class="wxStaticText" name="DownloadEstimatedLabel">
+                                    <font>
+                                        <size>8</size>
+                                        <family>default</family>
+                                        <style>italic</style>
+                                        <weight>normal</weight>
+                                        <underlined>0</underlined>
+                                    </font>
+                                    <label>Estimated time</label>
+                                    <wrap>-1</wrap>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER_VERTICAL</flag>
+                        <border>5</border>
+                        <object class="wxPanel" name="DownloadPanelSep2">
+                            <size>2,50</size>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER_VERTICAL</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <minsize>130,-1</minsize>
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <object class="wxBitmapButton" name="DownloadPauseButton">
+                                            <style>wxNO_BORDER</style>
+                                            <size>41,30</size>
+                                            <tooltip>Pause download</tooltip>
+                                            <bitmap>gui/ico.button-18-pause-off.png</bitmap>
+                                            <selected>gui/ico.button-18-pause-on.png</selected>
+                                            <default>0</default>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <option>0</option>
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                                        <border>5</border>
+                                        <object class="wxBitmapButton" name="DownloadDeleteButton">
+                                            <style>wxNO_BORDER</style>
+                                            <size>41,30</size>
+                                            <tooltip>Remove from list</tooltip>
+                                            <bitmap>gui/ico.button-18-trash-off.png</bitmap>
+                                            <selected>gui/ico.button-18-trash-on.png</selected>
+                                            <default>0</default>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALIGN_CENTER_HORIZONTAL</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="DownloadDoneButton">
+                                    <style>wxNO_BORDER</style>
+                                    <size>92,30</size>
+                                    <font>
+                                        <family>default</family>
+                                        <style>italic</style>
+                                        <weight>bold</weight>
+                                        <underlined>0</underlined>
+                                    </font>
+                                    <bitmap>gui/ico.button-18-play-on.png</bitmap>
+                                    <default>0</default>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="m_panel23">
+                    <size>-1,1</size>
+                    <bg>#cccccc</bg>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxDialog" name="AboutDialog">
+        <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+        <size>415,-1</size>
+        <title>About</title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND | wxALL</flag>
+                <border>0</border>
+                <object class="wxPanel" name="AboutContent">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALL|wxEXPAND</flag>
+                            <border>5</border>
+                            <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxBOTTOM|wxRIGHT</flag>
+                                    <border>5</border>
+                                    <object class="wxStaticBitmap" name="AboutAppIcon">
+                                        <size>96,96</size>
+                                        <bitmap>icons/app_96.png</bitmap>
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>1</option>
+                                    <flag>wxRIGHT|wxTOP</flag>
+                                    <border>5</border>
+                                    <object class="wxBoxSizer">
+                                        <orient>wxVERTICAL</orient>
+                                        <object class="sizeritem">
+                                            <option>0</option>
+                                            <flag>wxBOTTOM|wxEXPAND</flag>
+                                            <border>10</border>
+                                            <object class="wxStaticText" name="AboutDescription">
+                                                <label>Libre Download Manager is a fast and easy to use torrent client.</label>
+                                                <wrap>200</wrap>
+                                            </object>
+                                        </object>
+                                        <object class="sizeritem">
+                                            <option>0</option>
+                                            <flag>wxBOTTOM|wxEXPAND</flag>
+                                            <border>10</border>
+                                            <object class="wxStaticText" name="AboutVersion">
+                                                <label>Version: unknown</label>
+                                                <wrap>-1</wrap>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>1</option>
+                            <flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxTextCtrl" name="AboutLicense">
+                                <style>wxTE_AUTO_URL|wxTE_DONTWRAP|wxTE_MULTILINE|wxTE_PROCESS_ENTER|wxTE_READONLY|wxTE_RICH|wxTE_WORDWRAP</style>
+                                <size>400,200</size>
+                                <font>
+                                    <family>default</family>
+                                    <style>normal</style>
+                                    <weight>normal</weight>
+                                    <underlined>0</underlined>
+                                </font>
+                                <value></value>
+                                <maxlength>0</maxlength>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="AboutSeparator">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                    <hidden>1</hidden>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxALIGN_CENTER|wxALL</flag>
+                <border>15</border>
+                <object class="wxButton" name="AboutOk">
+                    <label>OK</label>
+                    <default>1</default>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxDialog" name="URLDialog">
+        <style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+        <title>Download link</title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="URLContent">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALL</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="m_staticText4">
+                                <label>Paste your download links here</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>1</option>
+                            <flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxTextCtrl" name="UrlEntry">
+                                <style>wxTE_LEFT|wxTE_MULTILINE|wxTE_PROCESS_ENTER</style>
+                                <size>400,100</size>
+                                <value></value>
+                                <maxlength>0</maxlength>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="URLSeparator">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                    <hidden>1</hidden>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxALIGN_BOTTOM|wxALIGN_RIGHT|wxALL</flag>
+                <border>15</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_BOTTOM|wxALIGN_RIGHT|wxLEFT</flag>
+                        <border>10</border>
+                        <object class="wxButton" name="URLCancel">
+                            <label>Cancel</label>
+                            <default>0</default>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_BOTTOM|wxALIGN_RIGHT|wxLEFT</flag>
+                        <border>10</border>
+                        <object class="wxButton" name="URLOk">
+                            <label>OK</label>
+                            <default>1</default>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="WaitingPanel">
+        <style>wxTAB_TRAVERSAL</style>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxALIGN_CENTER_HORIZONTAL</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxBOTTOM|wxLEFT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="waiting_ready">
+                            <size>-1,25</size>
+                            <font>
+                                <size>11</size>
+                                <family>default</family>
+                                <style>normal</style>
+                                <weight>bold</weight>
+                                <underlined>0</underlined>
+                            </font>
+                            <label>Ready</label>
+                            <wrap>-1</wrap>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxBOTTOM|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="waiting_message">
+                            <size>-1,25</size>
+                            <font>
+                                <size>11</size>
+                                <family>default</family>
+                                <style>normal</style>
+                                <weight>normal</weight>
+                                <underlined>0</underlined>
+                            </font>
+                            <label>, waiting for torrents to download</label>
+                            <wrap>-1</wrap>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxDialog" name="MessageDialog">
+        <style>wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+        <title></title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="MessageContent">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <object class="wxBoxSizer">
+                        <orient>wxVERTICAL</orient>
+                        <object class="sizeritem">
+                            <option>1</option>
+                            <flag>wxALL|wxEXPAND</flag>
+                            <border>15</border>
+                            <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxALIGN_CENTER</flag>
+                                    <border>15</border>
+                                    <object class="wxStaticBitmap" name="MessageBitmap">
+                                        <style>wxFULL_REPAINT_ON_RESIZE</style>
+                                        <bitmap />
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>1</option>
+                                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                                    <border>5</border>
+                                    <object class="wxBoxSizer">
+                                        <orient>wxVERTICAL</orient>
+                                        <object class="sizeritem">
+                                            <option>0</option>
+                                            <flag>wxEXPAND</flag>
+                                            <border>2</border>
+                                            <object class="wxStaticText" name="MessageLabel">
+                                                <label>Message text</label>
+                                                <wrap>-1</wrap>
+                                            </object>
+                                        </object>
+                                        <object class="sizeritem">
+                                            <option>0</option>
+                                            <flag>wxEXPAND</flag>
+                                            <border>5</border>
+                                            <object class="wxStaticText" name="MessageSubLabel">
+                                                <label>Message text 2</label>
+                                                <wrap>-1</wrap>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT</flag>
+                            <border>15</border>
+                            <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                    <option>1</option>
+                                    <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxEXPAND</flag>
+                                    <border>15</border>
+                                    <object class="wxGauge" name="MessageDownloadGauge">
+                                        <style>wxGA_HORIZONTAL</style>
+                                        <range>100</range>
+                                        <value>0</value>
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                    <border>15</border>
+                                    <object class="wxButton" name="MessageDownloadCancel">
+                                        <label>Cancel</label>
+                                        <default>0</default>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_RIGHT|wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+                            <border>15</border>
+                            <object class="wxBoxSizer">
+                                <orient>wxHORIZONTAL</orient>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                                    <border>5</border>
+                                    <object class="wxStaticBitmap" name="MessageInfoIcon">
+                                        <bitmap />
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>1</option>
+                                    <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                    <border>5</border>
+                                    <object class="wxStaticText" name="MessageInfo">
+                                        <label>Message status</label>
+                                        <wrap>-1</wrap>
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxRIGHT</flag>
+                                    <border>0</border>
+                                    <object class="wxButton" name="MessageMultiStart">
+                                        <label>Download</label>
+                                        <default>0</default>
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxLEFT</flag>
+                                    <border>15</border>
+                                    <object class="wxButton" name="MessageMultiGo">
+                                        <label>Go</label>
+                                        <default>0</default>
+                                    </object>
+                                </object>
+                                <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxLEFT</flag>
+                                    <border>15</border>
+                                    <object class="wxButton" name="MessageRunAgain">
+                                        <label>Run again</label>
+                                        <default>0</default>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxALIGN_BOTTOM|wxEXPAND</flag>
+                <border>0</border>
+                <object class="wxPanel" name="MessageSeparator">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <size>-1,1</size>
+                    <hidden>1</hidden>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxALIGN_BOTTOM|wxALIGN_RIGHT|wxALL</flag>
+                <border>15</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxRIGHT</flag>
+                        <border>15</border>
+                        <object class="wxButton" name="MessageStart">
+                            <label>Download</label>
+                            <default>0</default>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxRIGHT</flag>
+                        <border>15</border>
+                        <object class="wxButton" name="MessageGo">
+                            <label>Go</label>
+                            <default>0</default>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALIGN_RIGHT|wxRIGHT</flag>
+                        <border>4</border>
+                        <object class="wxButton" name="MessageBack">
+                            <label>&lt; Back</label>
+                            <default>0</default>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxRIGHT</flag>
+                        <border>15</border>
+                        <object class="wxButton" name="MessageNext">
+                            <label>Next &gt;</label>
+                            <default>1</default>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <option>0</option>
+                        <flag></flag>
+                        <border>15</border>
+                        <object class="wxButton" name="MessageClose">
+                            <label>Close</label>
+                            <default>0</default>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxDialog" name="PlayerDialog">
+        <style>wxNO_BORDER</style>
+        <title></title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxVERTICAL</orient>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="PlayerTop">
+                    <style>wxTAB_TRAVERSAL</style>
+                    <object class="wxBoxSizer">
+                        <minsize>-1,40</minsize>
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <option>1</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                            <border>14</border>
+                            <object class="wxStaticText" name="PlayerTitle">
+                                <font>
+                                    <family>default</family>
+                                    <style>normal</style>
+                                    <weight>bold</weight>
+                                    <underlined>0</underlined>
+                                </font>
+                                <label>MyLabel</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALL</flag>
+                            <border>0</border>
+                            <object class="wxBitmapButton" name="PlayerCloseButton">
+                                <style>wxNO_BORDER</style>
+                                <bitmap>gui/bg.corner-close.png</bitmap>
+                                <default>0</default>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>1</option>
+                <flag>wxALIGN_CENTER|wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="PlayerPanel">
+                    <size>640,390</size>
+                    <bg>#000000</bg>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <option>0</option>
+                <flag>wxEXPAND</flag>
+                <border>5</border>
+                <object class="wxPanel" name="PlayerControls">
+                    <style>wxFULL_REPAINT_ON_RESIZE</style>
+                    <object class="wxBoxSizer">
+                        <minsize>-1,40</minsize>
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                            <border>9</border>
+                            <object class="wxBitmapButton" name="PlayerPrev">
+                                <style>wxNO_BORDER</style>
+                                <size>27,20</size>
+                                <hidden>1</hidden>
+                                <bitmap>gui/ico.button-18-previous-off.png</bitmap>
+                                <default>0</default>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+                            <border>5</border>
+                            <object class="wxBitmapButton" name="PlayerPause">
+                                <style>wxNO_BORDER</style>
+                                <size>40,30</size>
+                                <bitmap>gui/ico.button-18-pause-off.png</bitmap>
+                                <selected>gui/ico.button-18-play-on.png</selected>
+                                <default>0</default>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL</flag>
+                            <border>5</border>
+                            <object class="wxBitmapButton" name="PlayerNext">
+                                <style>wxNO_BORDER</style>
+                                <size>27,20</size>
+                                <hidden>1</hidden>
+                                <bitmap>gui/ico.button-18-next-off.png</bitmap>
+                                <default>0</default>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL</flag>
+                            <border>5</border>
+                            <object class="wxStaticText" name="PlayerTime">
+                                <style>wxALIGN_RIGHT</style>
+                                <size>51,-1</size>
+                                <font>
+                                    <family>default</family>
+                                    <style>normal</style>
+                                    <weight>bold</weight>
+                                    <underlined>0</underlined>
+                                </font>
+                                <label>1:56</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+                            <border>2</border>
+                            <object class="wxStaticText" name="m_staticText20">
+                                <style>wxALIGN_CENTRE</style>
+                                <label>/</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                            <border>8</border>
+                            <object class="wxStaticText" name="PlayerLength">
+                                <label>11:17</label>
+                                <wrap>-1</wrap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>1</option>
+                            <flag>wxALIGN_CENTER_VERTICAL</flag>
+                            <border>5</border>
+                            <object class="wxGauge" name="PlayerProgress">
+                                <style>wxGA_HORIZONTAL</style>
+                                <size>-1,17</size>
+                                <range>100</range>
+                                <value>0</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxALIGN_CENTER_VERTICAL</flag>
+                            <border>29</border>
+                            <object class="wxStaticBitmap" name="m_bitmap9">
+                                <bitmap>gui/ico.button-18-audio-down-off.png</bitmap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                            <border>3</border>
+                            <object class="wxGauge" name="PlayerVolume">
+                                <style>wxGA_HORIZONTAL</style>
+                                <size>44,9</size>
+                                <range>100</range>
+                                <value>0</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                            <border>22</border>
+                            <object class="wxStaticBitmap" name="m_bitmap10">
+                                <bitmap>gui/ico.button-18-audio-up-off.png</bitmap>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                            <border>12</border>
+                            <object class="wxBitmapButton" name="PlayerFullscreen">
+                                <style>wxNO_BORDER</style>
+                                <size>27,20</size>
+                                <bitmap>gui/ico.button-18-full-screen-off.png</bitmap>
+                                <selected>gui/ico.button-18-nofull-screen-on.png</selected>
+                                <default>0</default>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxMenu" name="MainContextMenu">
+        <label>MyMenu</label>
+        <object class="wxMenuItem" name="m_menuItem81">
+            <label>Resume</label>
+            <help></help>
+            <bitmap>icons/media-playback-start.png</bitmap>
+        </object>
+        <object class="wxMenuItem" name="m_menuItem82">
+            <label>Pause</label>
+            <help></help>
+            <bitmap>icons/media-playback-pause.png</bitmap>
+        </object>
+        <object class="separator" />
+        <object class="wxMenuItem" name="m_menuItem18">
+            <label>Recheck</label>
+            <help></help>
+            <bitmap>icons/view-refresh.png</bitmap>
+        </object>
+        <object class="separator" />
+        <object class="wxMenuItem" name="m_menuItem16">
+            <label>Increase priority</label>
+            <help></help>
+            <bitmap>icons/go-up.png</bitmap>
+        </object>
+        <object class="wxMenuItem" name="m_menuItem17">
+            <label>Decrease priority</label>
+            <help></help>
+            <bitmap>icons/go-down.png</bitmap>
+        </object>
+        <object class="separator" />
+        <object class="wxMenuItem" name="m_menuItem9">
+            <label>Open download folder</label>
+            <help></help>
+            <bitmap>icons/folder_download_16.png</bitmap>
+        </object>
+        <object class="wxMenuItem" name="m_menuItem91">
+            <label>Open file</label>
+            <help></help>
+            <bitmap>icons/fileopen.png</bitmap>
+        </object>
+        <object class="separator" />
+        <object class="wxMenuItem" name="m_menuItem10">
+            <label>Remove from list</label>
+            <help></help>
+            <bitmap>icons/gtk-delete.png</bitmap>
+        </object>
+        <object class="separator" />
+        <object class="wxMenuItem" name="m_menuItem11">
+            <label>Properties</label>
+            <help></help>
+            <bitmap>icons/gtk-properties.png</bitmap>
+        </object>
+    </object>
+</resource>

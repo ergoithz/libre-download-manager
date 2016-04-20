@@ -1,0 +1,840 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Libre Download Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-27 12:08+0100\n"
+"PO-Revision-Date: 2014-02-27 12:10+0100\n"
+"Last-Translator: Jordi Burguet-Castell <jordi@mp2p.net>\n"
+"Language-Team: mp2p <jordi@mp2p.net>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: server/templates/error.html:19
+msgid "Cannot connect!"
+msgstr "¡No se puede conectar!"
+
+#: server/templates/error.html:20
+#, python-format
+msgid ""
+"It seems your Internet connection is down. You need to be connected to "
+"perform the search. Please %(click)s when your connection is back."
+msgstr ""
+"Parece que tu conexión a internet no funciona. Hace falta estar conectado "
+"para hacer la búsqueda. Por favor %(click)s cuando tu conexión vuelva."
+
+#: server/templates/error.html:20
+msgid "click here"
+msgstr "pincha aquí"
+
+#: server/templates/play.html:2
+#, python-format
+msgid "You've just deleted <strong>%(num)d</strong> file(s) from your library."
+msgstr "Acabas de borrar <strong>%(num)d</strong> file(s) from your library."
+
+#: server/templates/play.html:2
+msgid "Undo"
+msgstr "Deshacer"
+
+#: server/templates/play.html:7
+#, python-format
+msgid "%(total)d file(s) on your %(app_name)s library"
+msgstr "%(total)d fichero(s) en tu biblioteca de %(app_name)s"
+
+#: server/templates/play.html:9
+#, python-format
+msgid "%(num)d of %(total)d file(s) on your %(app_name)s library"
+msgstr "%(num)d de %(total)d fichero(s) en tu biblioteca de %(app_name)s"
+
+#: server/templates/play.html:22
+msgid "New"
+msgstr "Nuevo"
+
+#: server/templates/play.html:64
+msgid "Play"
+msgstr "Reproducir"
+
+#: server/templates/play.html:66
+msgid "Open"
+msgstr "Abrir"
+
+#: server/templates/play.html:77
+msgid "Browse"
+msgstr "Navegar"
+
+#: server/templates/play.html:87
+msgid "Remove"
+msgstr "Eliminar"
+
+#: server/templates/play.html:121 server/templates/play.html:124
+msgid "Share:"
+msgstr "Comartir:"
+
+#: server/templates/play.html:127
+msgid "Share to:"
+msgstr "Compartir a:"
+
+#: server/templates/play.html:152
+msgid "Share"
+msgstr "Compartir"
+
+#: server/templates/play.html:168 server/__init__.py:981
+msgid "Rename"
+msgstr "Renombrar"
+
+#: server/templates/play.html:178
+msgid "seed"
+msgstr "compartir"
+
+#: server/templates/play.html:226
+msgid "Search form"
+msgstr "Buscar en"
+
+#: server/templates/play.html:228
+msgid "Search:"
+msgstr "Buscar:"
+
+#: server/templates/play.html:229
+msgid "'Type here your search'"
+msgstr "'Escribe aquí tu búsqueda'"
+
+#: server/templates/report.html:16
+msgid "Report"
+msgstr "Reportar"
+
+#: server/templates/report.html:20
+msgid "Name:"
+msgstr "Nombre:"
+
+#: server/templates/report.html:24
+msgid "Surname:"
+msgstr "Apellido(s):"
+
+#: server/templates/report.html:28
+msgid "Company:"
+msgstr "Empresa:"
+
+#: server/templates/report.html:32 server/templates/settings.html:232
+#: server/templates/settings.html:241
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#: server/templates/report.html:36
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#: server/templates/report.html:40
+msgid "Complaint reason:"
+msgstr "Motivo de la reclamación:"
+
+#: server/templates/report.html:44
+msgid "Message:"
+msgstr "Mensage:"
+
+#: server/templates/report.html:49
+#, python-format
+msgid "I have read and accept the %(tos)s and %(privacy)s."
+msgstr "He leído y acepto los %(tos)s y la %(privacy)s."
+
+#: server/templates/report.html:49
+msgid "Terms of use"
+msgstr "Términos de uso"
+
+#: server/templates/report.html:49
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+#: server/templates/settings.html:16 server/templates/settings.html:23
+#: front.py:2231 front2.py:2294
+msgid "Settings"
+msgstr "Preferencias"
+
+#: server/templates/settings.html:24 server/templates/settings.html:258
+msgid "General"
+msgstr "General"
+
+#: server/templates/settings.html:28
+msgid "Language:"
+msgstr "Idioma:"
+
+#: server/templates/settings.html:36
+msgid "Set as default torrent client"
+msgstr "Usar como cliente de torrents por defecto"
+
+#: server/templates/settings.html:36
+#, python-format
+msgid "%(app_name)s is your default torrent client"
+msgstr "%(app_name)s es tu cliente de torrents por defecto"
+
+#: server/templates/settings.html:40
+msgid "Prevent the computer from sleeping/suspending"
+msgstr "Evitar que el ordenador entre en modo de hibernación/suspendido"
+
+#: server/templates/settings.html:44
+msgid "Run application on startup"
+msgstr "Ejecutar la aplicación al inicio"
+
+#: server/templates/settings.html:48
+msgid "Updates"
+msgstr "Actualizaciones"
+
+#: server/templates/settings.html:52
+msgid "Never"
+msgstr "Nunca"
+
+#: server/templates/settings.html:56
+msgid "Check for updates automatically"
+msgstr "Buscar actualizaciones automáticamente"
+
+#: server/templates/settings.html:60
+msgid "Install updates automatically"
+msgstr "Instalar actualizaciones automáticamente"
+
+#: server/templates/settings.html:66 server/templates/settings.html:265
+msgid "Connection"
+msgstr "Conexión"
+
+#: server/templates/settings.html:67
+msgid "Standard mode"
+msgstr "Modo estándar"
+
+#: server/templates/settings.html:70 server/templates/settings.html:93
+msgid "Upload speed limit"
+msgstr "Velocidad límite de subida"
+
+#: server/templates/settings.html:75 server/templates/settings.html:98
+msgid "Download speed limit"
+msgstr "Velocidad límite de descarga"
+
+#: server/templates/settings.html:80 server/templates/settings.html:103
+msgid "Maximum active downloads"
+msgstr "Máximas descargas activas"
+
+#: server/templates/settings.html:85 server/templates/settings.html:108
+msgid "Connections per download:"
+msgstr "Conexiones por descarga:"
+
+#: server/templates/settings.html:90
+msgid "Slow mode"
+msgstr "Modo lento"
+
+#: server/templates/settings.html:113
+msgid "Ports"
+msgstr "Puertos"
+
+#: server/templates/settings.html:116
+msgid "Choose ports automatically"
+msgstr "Elige puertos automáticamente"
+
+#: server/templates/settings.html:141
+msgid "Proxy Settings"
+msgstr "Preferencias de proxy"
+
+#: server/templates/settings.html:146
+msgid "Host:"
+msgstr "Servidor:"
+
+#: server/templates/settings.html:150
+msgid "Port:"
+msgstr "Puerto:"
+
+#: server/templates/settings.html:154
+msgid "User:"
+msgstr "Usuario:"
+
+#: server/templates/settings.html:158 server/templates/settings.html:234
+#: server/templates/settings.html:243
+msgid "Pass:"
+msgstr "Clave:"
+
+#: server/templates/settings.html:162
+msgid "SOCKS:"
+msgstr "SOCKS:"
+
+#: server/templates/settings.html:170 server/templates/settings.html:272
+msgid "Downloads"
+msgstr "Descargas"
+
+#: server/templates/settings.html:173
+msgid "Downloads folder:"
+msgstr "Carpeta de descargas:"
+
+#: server/templates/settings.html:175
+msgid "Change"
+msgstr "Cambiar"
+
+#: server/templates/settings.html:179
+msgid "Notify finished downloads"
+msgstr "Avisar de descargas finalizadas"
+
+#: server/templates/settings.html:182
+msgid "With sound"
+msgstr "Con sonido"
+
+#: server/templates/settings.html:191 server/templates/settings.html:280
+msgid "Sharing"
+msgstr "Compartir"
+
+#: server/templates/settings.html:192
+msgid "Seed files after downloading:"
+msgstr "Compartir ficheros tras descargar:"
+
+#: server/templates/settings.html:196
+msgid "Disabled"
+msgstr "Deshabilitado"
+
+#: server/templates/settings.html:200
+msgid "For"
+msgstr "Por"
+
+#: server/templates/settings.html:202 utils.py:1351
+msgid "minutes"
+msgstr "minutos"
+
+#: server/templates/settings.html:206
+msgid "Until"
+msgstr "Hasta"
+
+#: server/templates/settings.html:208
+msgid "ratio"
+msgstr "proporción"
+
+#: server/templates/settings.html:214 server/templates/settings.html:287
+msgid "Display"
+msgstr "Pantalla"
+
+#: server/templates/settings.html:217
+msgid "Font Size:"
+msgstr "Tamaño de la fuente:"
+
+#: server/templates/settings.html:219
+msgid "Small"
+msgstr "Pequeño"
+
+#: server/templates/settings.html:220
+msgid "Medium"
+msgstr "Medio"
+
+#: server/templates/settings.html:221
+msgid "Big"
+msgstr "Grande"
+
+#: server/templates/settings.html:228 server/templates/settings.html:301
+msgid "Social Media"
+msgstr "Medios sociales"
+
+#: server/templates/settings.html:229
+msgid "Facebook"
+msgstr "Facebook"
+
+#: server/templates/settings.html:238
+msgid "Twitter"
+msgstr "Twitter"
+
+#: server/templates/settings.html:294
+msgid "Player"
+msgstr "Reproductor"
+
+#: front.py:254 front.py:1918 front2.py:261 front2.py:1984
+msgid "Show window"
+msgstr "Mostrar ventana"
+
+#: front.py:264 front.py:1901 front2.py:271 front2.py:1967
+msgid "Add torrent link"
+msgstr "Añadir enlace de torrent"
+
+#: front.py:264 front.py:1902 front2.py:271 front2.py:1968
+msgid "Add torrent from remote internet location"
+msgstr "Añadir torrent de una dirección de internet (url)"
+
+#: front.py:269 front.py:1914 front2.py:276 front2.py:1980
+msgid "Add torrent file"
+msgstr "Añadir fichero torrent"
+
+#: front.py:269 front.py:1915 front2.py:276 front2.py:1981
+msgid "Add torrent from downloaded torrent file"
+msgstr "Añadir torrent desde un fichero descargado"
+
+#: front.py:276 front.py:1921 front.py:1955 front2.py:283 front2.py:1987
+#: front2.py:2021
+msgid "About"
+msgstr "Acerca de"
+
+#: front.py:283 front.py:1924 front2.py:290 front2.py:1990
+msgid "Exit"
+msgstr "Salir"
+
+#: front.py:355 front2.py:362
+msgid ""
+"Language changed.\n"
+"\n"
+"Please restart the application for the change to apply."
+msgstr ""
+"Idioma cambiado.\n"
+"\n"
+"Por favor reinicie la aplicación para que se aplique el cambio."
+
+#: front.py:357 gui.py:500 front2.py:364 front2.py:974
+msgid "Information"
+msgstr "Información"
+
+#: front.py:529 front2.py:536
+msgid "Cannot download:"
+msgstr "No se puede bajar:"
+
+#: front.py:540 front2.py:547
+msgid "Choose torrent file"
+msgstr "Elige fichero torrent"
+
+#: front.py:549 front2.py:556
+msgid "Cannot add torrent:"
+msgstr "No se puede añadir torrent:"
+
+#: front.py:555 front2.py:562
+msgid "Problem found"
+msgstr "Problema encontrado"
+
+#: front.py:579 front2.py:586
+#, python-format
+msgid ""
+"Something (maybe your antivirus) is preventing %(app)s for removing old "
+"installation files.\n"
+"If you want to update, you can remove the old installer manually and restart "
+"this application."
+msgstr ""
+"Hay algo (tal vez tu antivirus) que impide a %(app)s borrar la instalación "
+"vieja.\n"
+"Si quieres actualizarte, puedes borrar la vieja instalación manualmente y "
+"reiniciar esta aplicación."
+
+#: front.py:583 front2.py:590
+msgid "Update available but not installable"
+msgstr "Actualización disponible pero no instalable"
+
+#: front.py:943 front2.py:955
+msgid "Application has been minimized to tray"
+msgstr "La aplicación ha sido enviada a la bandeja del sistema"
+
+#: front.py:1398 front2.py:1467
+#, python-format
+msgid "Cannot download: %(name)s"
+msgstr "No se puede bajar: %(name)s"
+
+#: front.py:1400 front2.py:1469
+msgid "Cannot download."
+msgstr "No se puede bajar."
+
+#: front.py:1524 front.py:1949 front2.py:1589 front2.py:2015
+msgid "Remove from list"
+msgstr "Borrar de la lista"
+
+#: front.py:1525
+msgid "play_download"
+msgstr "VER"
+
+#: front.py:1628 front2.py:1693
+msgid "No name"
+msgstr "No hay nombre"
+
+#: front.py:1678 front2.py:1743
+msgid "Download finished"
+msgstr "Descarga finalizada"
+
+#: front.py:1688 front2.py:1753
+msgid "finished"
+msgstr "finalizada"
+
+#: front.py:1692 front2.py:1757
+#, python-format
+msgid "%(progress)s of %(size)s"
+msgstr "%(progress)s de %(size)s"
+
+#: front.py:1701 front2.py:1766
+#, python-format
+msgid "%(time)s left"
+msgstr "%(time)s restantes"
+
+#: front.py:1703 front2.py:1768
+msgid "unknown"
+msgstr "desconocido"
+
+#: front.py:1718 front2.py:1783
+msgid "paused"
+msgstr "pausado"
+
+#: front.py:1720 front2.py:1785
+msgid "queued"
+msgstr "en cola"
+
+#: front.py:1723 front2.py:1788
+msgid "checking"
+msgstr "probando"
+
+#: front.py:1725 front2.py:1790
+msgid "downloading"
+msgstr "bajando"
+
+#: front.py:1776 front2.py:1842
+msgid "resume"
+msgstr "continuar"
+
+#: front.py:1776 front2.py:1842
+msgid "pause"
+msgstr "pausar"
+
+#: front.py:1821 front.py:1863 front2.py:1887 front2.py:1929
+#, python-format
+msgid "%(num)s tasks"
+msgstr "%(num)s tareas"
+
+#: front.py:1821 front.py:1863 front2.py:1887 front2.py:1929
+msgid "1 task"
+msgstr "1 tarea"
+
+#: front.py:1869 front2.py:1935
+msgid "Download added"
+msgstr "Descarga añadida"
+
+#: front.py:1903 front2.py:1969
+#, python-format
+msgid "%(appname)s is a fast and easy-to-use torrent client."
+msgstr "%(appname)s es un cliente de torrent rápido y de fácil uso"
+
+#: front.py:1905 front2.py:1971
+msgid "Ready, waiting for torrents to download"
+msgstr "Preparado, esperando torrents para descargar"
+
+#: front.py:1907 front2.py:1973
+msgid "Add link"
+msgstr "Añadir enlace"
+
+#: front.py:1908 front2.py:1974
+msgid "Add link from remote internet location"
+msgstr "Añadir enlace de dirección de internet (url)"
+
+#: front.py:1909 front2.py:1975
+#, python-format
+msgid "%(appname)s is a fast and easy-to-use P2P client."
+msgstr "%(appname)s es un cliente P2P rápido y fácil de usar."
+
+#: front.py:1911 front2.py:1977
+msgid "Ready, waiting for downloads"
+msgstr "Listo, esperando a descargas"
+
+#: front.py:1928 front2.py:1994
+msgid "Resume"
+msgstr "Continuar"
+
+#: front.py:1931 front2.py:1997
+msgid "Pause"
+msgstr "Pausar"
+
+#: front.py:1934 front2.py:2000
+msgid "Recheck"
+msgstr "Recomprobar"
+
+#: front.py:1937 front2.py:2003
+msgid "Increase Priority"
+msgstr "Subir prioridad"
+
+#: front.py:1940 front2.py:2006
+msgid "Decrease Priority"
+msgstr "Bajar prioridad"
+
+#: front.py:1943 front2.py:2009
+msgid "Open download folder"
+msgstr "Abrir carpeta de descargas"
+
+#: front.py:1946 front2.py:2012
+msgid "Open file"
+msgstr "Abrir fichero"
+
+#: front.py:1952 front2.py:2018
+msgid "Properties"
+msgstr "Propiedades"
+
+#: front.py:1957 front2.py:2023
+msgid "Download link"
+msgstr "Enlace de descarga"
+
+#: front.py:1959 front2.py:2025
+msgid "Paste your download links here"
+msgstr "Pega tus enlaces de descarga aquí"
+
+#: front.py:2194 front2.py:2257
+msgid "FIND"
+msgstr "BUSCAR"
+
+#: front.py:2194 front2.py:2257
+msgid "Find downloads"
+msgstr "Buscar descargas"
+
+#: front.py:2200 front2.py:2263
+msgid "DOWNLOADS"
+msgstr "DESCARGAS"
+
+#: front.py:2200 front2.py:2263
+msgid "Current downloads"
+msgstr "Descargas actuales"
+
+#: front.py:2207 front2.py:2270
+msgid "PLAY"
+msgstr "REPRODUCIR"
+
+#: front.py:2207 front2.py:2270
+msgid "Play stuff"
+msgstr "Reproducir cosas"
+
+#: front.py:2222 front2.py:2285
+msgid "EXTRAS"
+msgstr "EXTRAS"
+
+#: front.py:2222 front2.py:2285
+#, python-format
+msgid "Extra stuff for %s"
+msgstr "Cosas extra para %s"
+
+#: front.py:2247 front2.py:2310
+msgid "Toggle slow mode"
+msgstr "Cambia a modo lento"
+
+#: front.py:2282 front2.py:2345
+#, python-format
+msgid "Version: %s"
+msgstr "Versión: %s"
+
+#: front.py:2678 front2.py:2742
+msgid "Startup error"
+msgstr "Error de inicio"
+
+#: front.py:2679 front2.py:2743
+#, python-format
+msgid ""
+"We're so sorry, %(app)s failed.\n"
+"Stay tuned for updates."
+msgstr ""
+"Lo sentimos, %(app)s falló.\n"
+"Mantente alerta para actualizaciones."
+
+#: gui.py:77
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: gui.py:79
+msgid "Close"
+msgstr "Cerrar"
+
+#: gui.py:104
+msgid "Download"
+msgstr "Descargar"
+
+#: gui.py:119
+msgid "Go"
+msgstr "Ir"
+
+#: gui.py:192
+msgid "Message"
+msgstr "Mensage"
+
+#: utils.py:1350
+msgid "second"
+msgstr "segundo"
+
+#: utils.py:1350
+msgid "seconds"
+msgstr "segundos"
+
+#: utils.py:1351
+msgid "minute"
+msgstr "minuto"
+
+#: utils.py:1352
+msgid "hour"
+msgstr "hora"
+
+#: utils.py:1352
+msgid "hours"
+msgstr "horas"
+
+#: utils.py:1353
+msgid "day"
+msgstr "día"
+
+#: utils.py:1353
+msgid "days"
+msgstr "días"
+
+#: utils.py:1354
+msgid "month"
+msgstr "mes"
+
+#: utils.py:1354
+msgid "months"
+msgstr "meses"
+
+#: utils.py:1355
+msgid "year"
+msgstr "año"
+
+#: utils.py:1355
+msgid "years"
+msgstr "años"
+
+#: utils.py:1356
+msgid "decade"
+msgstr "década"
+
+#: utils.py:1356
+msgid "decades"
+msgstr "décadas"
+
+#: utils.py:1357
+msgid "century"
+msgstr "siglo"
+
+#: utils.py:1357
+msgid "centuries"
+msgstr "siglos"
+
+#: backends/_libtorrent.py:143
+msgid "link"
+msgstr "enlace"
+
+#: backends/_libtorrent.py:144
+msgid "hash"
+msgstr "hash"
+
+#: backends/_libtorrent.py:145
+msgid "location"
+msgstr "lugar"
+
+#: backends/_libtorrent.py:146
+msgid "pieces"
+msgstr "trozos"
+
+#: backends/_libtorrent.py:147
+msgid "availability"
+msgstr "disponibilidad"
+
+#: backends/_libtorrent.py:148
+msgid "state"
+msgstr "estado"
+
+#: backends/_libtorrent.py:153
+msgid "comments"
+msgstr "comentarios"
+
+#: backends/_libtorrent.py:156
+msgid "trackers"
+msgstr "trackers"
+
+#: backends/_libtorrent.py:157
+msgid "files"
+msgstr "ficheros"
+
+#: wxproxy/__init__.py:3147
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: overrides/torrents/constants.py:88 overrides/blubster/constants.py:82
+#: overrides/foofind/constants.py:82 constants/constants.py:82
+msgid "all"
+msgstr "todos"
+
+#: overrides/torrents/constants.py:89
+msgid "movies"
+msgstr "películas"
+
+#: overrides/torrents/constants.py:90
+msgid "games"
+msgstr "juegos"
+
+#: overrides/torrents/constants.py:91
+msgid "series"
+msgstr "series"
+
+#: overrides/torrents/constants.py:92 overrides/blubster/constants.py:85
+#: overrides/foofind/constants.py:85 constants/constants.py:85
+msgid "music"
+msgstr "música"
+
+#: overrides/torrents/constants.py:93
+msgid "anime"
+msgstr "anime"
+
+#: overrides/torrents/constants.py:94
+msgid "books"
+msgstr "libros"
+
+#: overrides/torrents/constants.py:95
+msgid "adult"
+msgstr "adulto"
+
+#: overrides/torrents/constants.py:96 overrides/blubster/constants.py:88
+#: overrides/foofind/constants.py:88 constants/constants.py:88
+msgid "software"
+msgstr "programas"
+
+#: overrides/torrents/constants.py:97
+msgid "mobile"
+msgstr "móvil"
+
+#: overrides/torrents/constants.py:98
+msgid "pictures"
+msgstr "imágenes"
+
+#: overrides/blubster/constants.py:83 overrides/foofind/constants.py:83
+#: constants/constants.py:83
+msgid "recent"
+msgstr "recientes"
+
+#: overrides/blubster/constants.py:84 overrides/foofind/constants.py:84
+#: constants/constants.py:84
+msgid "video"
+msgstr "vídeos"
+
+#: overrides/blubster/constants.py:86 overrides/foofind/constants.py:86
+#: constants/constants.py:86
+msgid "images"
+msgstr "imágenes"
+
+#: overrides/blubster/constants.py:87 overrides/foofind/constants.py:87
+#: constants/constants.py:87
+msgid "docs"
+msgstr "docs"
+
+#: config/__init__.py:1217
+#, python-format
+msgid ""
+"New version of %(appname)s (%(version)s) is ready to install.\n"
+"Do you want to upgrade?"
+msgstr ""
+"Nueva versión %(appname)s (%(version)s) está lista para ser instalada.\n"
+"Quieres actualizarte?"
+
+#: config/__init__.py:1220 config/__init__.py:1230
+msgid "Update available"
+msgstr "Actualización disponible"
+
+#: config/__init__.py:1227
+#, python-format
+msgid ""
+"New version of %s is ready to install.\n"
+"Do you want to upgrade?"
+msgstr ""
+"Nueva versión de %s está lista para instalarse.\n"
+"Quieres actualizarte?"
+
+#: front2.py:1590
+msgid "button_play"
+msgstr "VER"
