@@ -1,6 +1,7 @@
-# Free Download Manager
+# Libre Download Manager
 
-This is a mirror of (probably no longer working) sources of the now-defunct project Free Download Manager, publicy branded as **Foofind Download Manager** and **Torrents Downloader**.
+This is a mirror of (probably no longer working) sources of the now-defunct project Libre Download Manager, publicy branded 
+as **Foofind Download Manager** and **Torrents Downloader**.
 
 Sources were recovered thanks to [Internet Archive Wayback Machine](https://web.archive.org/web/*/http://foofind.is/en/downloader/SRC/*).
 
