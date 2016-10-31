@@ -28,4 +28,4 @@ Pablo Soto (UX and product lead)
 
 ## Final note
 
-My memory is not perfect (and this a fairy old project), so feel free to open an issue (or pull request) if you contributed.
+My memory is not perfect (and this is a fairly old project), so feel free to open an issue (or pull request) if you contributed and should be listed here.
